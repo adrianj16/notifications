@@ -1,0 +1,97 @@
+//Notification
+{
+  "id": "project_join",
+  "type": "status",
+  "message": "",
+  "method": "mail",
+  "data": [
+    "user_name"
+  ],
+  "restrictions": [
+    {
+      "quantity": 2,
+      "timeframe": {
+        "from": "1",
+        "to": "0",
+        "scale": "minute"
+      }
+    }
+  ]
+}
+
+{
+  "id": "project_join",
+  "type": "news",
+  "message": "",
+  "method": "mail",
+  "data": [
+    "user_name"
+  ],
+  "restrictions": [
+    {
+      "quantity": 100,
+      "timeframe": {
+        "from": "1",
+        "to": "0",
+        "scale": "day"
+      }
+    }
+  ]
+}
+
+{
+  "id": "project_join",
+  "type": "marketing",
+  "message": "Hi {user_name} this is a marketing cupon",
+  "method": "mail",
+  "data": [
+    "user_name"
+  ],
+  "restrictions": [
+    {
+      "quantity": 3,
+      "timeframe": {
+        "from": "1",
+        "to": "0",
+        "scale": "hour"
+      }
+    }
+  ]
+}
+//Restriction
+{
+  "quantity": 2,
+  "timeframe": {
+    "from": "1",
+    "to": "0",
+    "scale": "minute"
+  }
+}
+
+// Usuario
+{
+  "user_id": "123445",
+  "user_name": "client_1",
+  "type": "internal_user",
+  "email": "internal_123445@notification.com",
+  "phone": "+541112344321",
+  "notifications": [
+    {
+      "id": "project_join",
+      "type": "news",
+      "date_created": "01-01-2023 01:00:00"
+    },
+    {
+      "id": "project_join",
+      "type": "status",
+      "date_created": "01-01-2023 01:00:00"
+    }
+  ]
+}
+
+//User notification
+{
+  "id": "project_join",
+  "type": "news",
+  "date_created": "01-01-2023 01:00:00"
+}
