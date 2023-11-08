@@ -1,5 +1,7 @@
 package models
 
+import "notifications/models/enums"
+
 type Notification struct {
 	Id           string                    `json:"id"`
 	Type         string                    `json:"type"`
@@ -15,7 +17,12 @@ type NotificationRestriction struct {
 }
 
 type Timeframe struct {
-	From  string `json:"from"`
-	To    string `json:"to"`
-	Scale string `json:"scale"`
+	From  int       `json:"from"`
+	To    int             `json:"to"`
+	Scale enums.TimeScale `json:"scale"`
+}
+
+type UserNotifyRequest struct {
+	NotificationId string                 `json:"notification_id"`
+	Data           map[string]interface{} `json:"data"`
 }
